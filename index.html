@@ -2,44 +2,40 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Simple Quiz</title>
-	<link rel="stylesheet" href="./main.css" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz</title>
+	<link rel="shortcut icon" type="image/png" href="quiz.png">
+	<link rel="stylesheet" href="./main.css">
 	<script defer src="./main.js"></script>
 </head>
+
 <body>
 
 	<div class="quiz" id="quiz">
 
 		<div class="quiz-header" id="header">
 			<!-- Заголовок вопроса -->
-			<h2 class="title">Загружаем вопрос...</h2>
+			<h2 class="title" id="title">Загружаем вопрос...</h2>
 
 			<!-- Результаты викторины -->
-			<h2 class="title">%title%</h2>
-			<h3 class="summary">%message%</h3>
-			<p class="result">%result%</p>
+			<div class="result-wrapper" style="display: none;">
+				<h2 class="title">%title%</h2>
+				<h3 class="summary">%message%</h3>
+				<p class="result">%result%</p>
+			</div>
+
 		</div>
 
-		<ul class="quiz-list" id="list">
-			<li>
-				<label>
-					<input type="radio" class="answer" name="answer" />
-					<span>Ответ...</span>
-				</label>
-			</li>
-			<li>
-				<label>
-					<input type="radio" class="answer" name="answer" />
-					<span>Ответ...</span>
-				</label>
-			</li>
-		</ul>
+		<ul class="quiz-list" id="list"></ul>
 
-		<button class="quiz-submit submit" id="submit">Ответить</button>
+		<div class="btn-wrapper">
+			<button class="quiz-btn" id="submit">Ответить</button>
+			<button class="quiz-btn" id="start" style="display: none;">Начать заново?</button>
+		</div>
 
 	</div>
+
 </body>
 </html>

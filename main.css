@@ -13,7 +13,7 @@ body {
 
 	/* https://cssgradient.io/gradient-backgrounds/ */
 	background: #c6ffdd;
-	background: linear-gradient( to right, #f7797d, #fbd786, #c6ffdd );
+	background: linear-gradient( to right, #ecd92d, #fd6060, #ecd92d );
 
 	display: flex;
 	justify-content: center;
@@ -23,14 +23,16 @@ body {
 
 .quiz {
 	position: relative;
-	padding: 2rem 2rem calc(2rem + 70px);
-
+	padding: 30px 40px;
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
 	width: 600px;
-	max-width: 95vw;
+	margin: 0 10px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .title{
@@ -56,6 +58,7 @@ body {
 .quiz-list {
 	list-style-type: none;
 	padding: 0;
+	margin: 15px 0;
 }
 
 .quiz-list li {
@@ -67,10 +70,11 @@ body {
 	width: 100%;
     display: block;
 	padding: 1rem 0.5rem;
+	border-radius: 20px;
 }
 
 .quiz-list label:hover {
-	background-color: seashell;
+	background-color: rgb(252, 255, 173);
 }
 
 .quiz-list label.correct {
@@ -96,11 +100,16 @@ body {
 	margin-right: 10px;
 }
 
-.quiz-submit {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.quiz-btn {
+	width: 100%;
+	background-color: #daca18;
+	color: #fff;
+	border: none;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-family: inherit;
 	height: 70px;
 	line-height: 70px;
 }
@@ -114,7 +123,6 @@ body {
 	cursor: pointer;
 	font-size: 1.1rem;
 	font-family: inherit;
-
 }
 
 .submit:hover {
